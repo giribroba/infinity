@@ -19,12 +19,12 @@ public class Cenario : MonoBehaviour
     {
         this.transform.Translate(Vector2.left * player.GetComponent<Player>().velocidade * velocidade);
 
-        if (this.transform.position.x <= 0 && !chamou)
+        if (this.transform.position.x <= 4 && !chamou)
         {
             ControladorCenario.Instanciar(Vector2.right * (this.transform.position.x + largura), variantes[Random.Range(0, variantes.Length)]);
             chamou = true;
         }
-        if (this.transform.position.x <= -largura)
+        if (this.transform.position.x <= -largura -4)
         {
             Destroy(this.gameObject);
         }
