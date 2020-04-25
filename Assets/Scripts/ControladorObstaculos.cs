@@ -6,8 +6,8 @@ public class ControladorObstaculos : MonoBehaviour
 {
     [SerializeField] private GameObject virus, camisinha, remedio;
     [SerializeField] private Vector2 posicao1, posicao2, posicao3;
-    [SerializeField] private float spawnTime;
-    private float spawnCooldown, spawnCamisinhaCooldown, numeroRandom, index;
+    [SerializeField] private float spawnTime, spawnCamisinhaCooldown;
+    private float spawnCooldown, numeroRandom, index;
     private Vector2 posicao;
     void Start()
     {
