@@ -32,11 +32,11 @@ public class Player : MonoBehaviour
             }
         }
 #elif UNITY_EDITOR
-        if (Input.GetAxisRaw("Vertical") < 0)
+        if (Input.GetKeyDown(KeyCode.S))
         {
             axisY = -1;
         }
-        else if (Input.GetAxisRaw("Vertical") > 0)
+        else if (Input.GetKeyDown(KeyCode.W))
         {
             axisY = 1;
         }
