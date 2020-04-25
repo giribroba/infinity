@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1954286614411102319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954286614411102317}
+  - component: {fileID: 1954286614411102318}
+  m_Layer: 0
+  m_Name: ControllerObjetos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954286614411102317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954286614411102319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.716, y: -3.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1954286614411102318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954286614411102319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491d90bf3209a564cbb170b215b813e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virus: {fileID: 7775871363821923269, guid: ae11d2318e691f74fb66951a7738f30a, type: 3}
+  camisinha: {fileID: 7847934435100222819, guid: 21533c7d1a17bf6438741c05b7ab667d,
+    type: 3}
+  remedio: {fileID: 1076128369908254188, guid: 70eddb54ac335ab448bf98f871467736, type: 3}
+  posicao1: {x: 13, y: -2.3}
+  posicao2: {x: 13, y: -3.2}
+  posicao3: {x: 13, y: -4.1}
+  spawnTime: 2
+  spawnCamisinhaCooldown: 5
