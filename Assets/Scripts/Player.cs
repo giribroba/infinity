@@ -60,4 +60,8 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(Collider2D.GetComponent<ObstaculosBehaviour>().)
+    }
 }
