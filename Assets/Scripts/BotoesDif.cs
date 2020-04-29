@@ -10,10 +10,14 @@ public class BotoesDif : MonoBehaviour
     [SerializeField] private Sprite[] sSom, sMusica;
     void Start()
     {
-        som = (PlayerPrefs.GetInt("som") == 0);
-        musica = (PlayerPrefs.GetInt("musica") == 0);
         iSom.sprite = sSom[PlayerPrefs.GetInt("som")];
         iMusica.sprite = sMusica[PlayerPrefs.GetInt("musica")];
+    }
+
+    private void Update()
+    {
+        som = (PlayerPrefs.GetInt("som") == 0);
+        musica = (PlayerPrefs.GetInt("musica") == 0);
     }
 
     public void Troca(string tipo)

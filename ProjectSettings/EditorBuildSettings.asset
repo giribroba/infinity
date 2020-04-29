@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Menu.unity
     guid: a7fad75707702cd4d9795e4a86e7663d
   - enabled: 1
@@ -26,4 +27,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Conv1(new).unity
     guid: d853d37ef12784f4fa90a1a9f33820a1
+=======
+    path: Assets/Scenes/teste.unity
+    guid: d040a607acbc8e448aae48bae801850a
+>>>>>>> f142092bb0cbcb9a3726c9b5812e6b6f89a88f5e
   m_configObjects: {}

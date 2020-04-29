@@ -12,7 +12,7 @@ public class Liguagem : MonoBehaviour
         {
             this.GetComponent<SpriteRenderer>().sprite = sprites[BotoesMenu.linguagem];
         }
-        if (!difImages)
+        else if(!difImages)
         {
             this.GetComponent<Image>().sprite = sprites[BotoesMenu.linguagem];
         }

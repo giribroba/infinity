@@ -2,13 +2,17 @@
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject barraVida;
     public float velocidade;
     private float startTouchY, finalTouchY;
     private Touch touch;
+    private bool shield;
+    public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
 
     void Update()
     {
+        AtivarBarra();
         axisY = 0;
 
         if (Input.GetMouseButtonDown(0))
@@ -48,6 +52,39 @@ public class Player : MonoBehaviour
             case -1:
                 this.transform.position = new Vector2(this.transform.position.x, -3.2f);
                 break;
+        }
+    }
+    private void AtivarBarra()
+    {
+        if (doente)
+        {
+            barraVida.SetActive(true);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponentInParent<ObstaculosBehaviour>().Pista == pistaAtual)
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "Virus":
+                    if (!shield)
+                    {
+                        doente = true;
+                    }
+                    else
+                    {
+                        shield = false;
+                    }
+                    break;
+                case "Camisinha":
+                    shield = true;
+                    break;
+                case "Remedio":
+                    barraVida.GetComponent<Vida>().VidaVar += 10;
+                    break;
+            }
+            Destroy(collision.gameObject);
         }
     }
 }
