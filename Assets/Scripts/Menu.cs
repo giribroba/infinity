@@ -5,7 +5,7 @@ public class Menu : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetButtonDown("Escape"))
+        if (Input.GetButtonDown("Cancel"))
         {
             SceneManager.LoadScene("Menu");
         }
