@@ -8,6 +8,7 @@ public class ControladorObstaculos : MonoBehaviour
     [SerializeField] private Vector2 posicao1, posicao2, posicao3;
     [SerializeField] private float spawnTime, spawnCamisinhaCooldown;
     private float spawnCooldown, numeroRandom, index;
+    private GameObject clone;
     private Vector2 posicao;
     void Start()
     {
@@ -24,18 +25,20 @@ public class ControladorObstaculos : MonoBehaviour
         if(spawnCooldown < Time.time)
         {
             numeroRandom = Random.Range(-1, 2);
-            posicao = numeroRandom == -1 ? posicao1 : numeroRandom == 0 ? posicao2 : posicao3;
+            posicao = numeroRandom == -1 ? posicao3 : numeroRandom == 0 ? posicao2 : posicao1;
             if(index >= spawnCamisinhaCooldown)
             {
-                Instantiate(camisinha, posicao, Quaternion.identity);
+                clone = Instantiate(camisinha, posicao, Quaternion.identity);
                 index = 0;
             }
             else
             {
-                Instantiate(virus, posicao, Quaternion.identity);
+                clone = Instantiate(virus, posicao, Quaternion.identity);
                 index++;
             }
+            clone.GetComponent<ObstaculosBehaviour>().Pista = numeroRandom;
             spawnCooldown = Time.time + spawnTime;
+
         }
     }
 }

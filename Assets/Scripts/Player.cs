@@ -2,9 +2,12 @@
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private GameObject barraVida;
     public float velocidade;
     private float startTouchY, finalTouchY;
     private Touch touch;
+    private bool shield;
+    public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
 
     void Start()
@@ -13,6 +16,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        AtivarBarra();
         axisY = 0;
 #if UNITY_ANDROID
         if (Input.touchCount > 0)
@@ -60,8 +64,37 @@ public class Player : MonoBehaviour
                 break;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void AtivarBarra()
     {
-        if(Collider2D.GetComponent<ObstaculosBehaviour>().)
+        if (doente)
+        {
+            barraVida.SetActive(true);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<ObstaculosBehaviour>().Pista == pistaAtual)
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "Virus":
+                    if (!shield)
+                    {
+                        doente = true;
+                    }
+                    else
+                    {
+                        shield = false;
+                    }
+                    break;
+                case "Camisinha":
+                    shield = true;
+                    break;
+                case "Remedio":
+                    barraVida.GetComponent<Vida>().VidaVar += 10;
+                    break;
+            }
+            Destroy(collision.gameObject);
+        }
     }
 }

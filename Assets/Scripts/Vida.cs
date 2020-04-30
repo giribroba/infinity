@@ -9,6 +9,7 @@ public class Vida : MonoBehaviour
     private RectTransform rt;
     private Image iBarraPreenchedora;
     private Renderer rParticula;
+    public float VidaVar { get { return vida; } set { vida = value; } }
     void Start()
     {
         rParticula = particula.GetComponent<Renderer>();
@@ -18,13 +19,17 @@ public class Vida : MonoBehaviour
 
     void Update()
     {
-        rParticula.material.color = iBarraPreenchedora.color;
-        particula.transform.position = barraMovel.transform.position - (Vector3.right * 0.05f);
+        if (Player.doente)
+        {
+            particula.enableEmission = true;
+            rParticula.material.color = iBarraPreenchedora.color;
+            particula.transform.position = barraMovel.transform.position - (Vector3.right * 0.05f);
 
-        iBarraPreenchedora.fillAmount = vida / 100;
-        iBarraPreenchedora.color = new Color(1, 0, vida / 100);
-        barraMovel.transform.localPosition = Vector2.right * (rt.rect.width * vida / 100 - rt.rect.width/2);
-        if(vida > 0)
-            vida -= velocidade * Time.deltaTime;
+            iBarraPreenchedora.fillAmount = vida / 100;
+            iBarraPreenchedora.color = new Color(1, 0, vida / 100);
+            barraMovel.transform.localPosition = Vector2.right * (rt.rect.width * vida / 100 - rt.rect.width / 2);
+            if (vida > 0)
+                vida -= velocidade * Time.deltaTime;
+        }
     }
 }

@@ -6,6 +6,8 @@ public class ObstaculosBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private float speed;
+    private float pista;
+    public float Pista{ get { return pista; } set { pista = value; } }
     // Start is called before the first frame update
     void Start()
     {

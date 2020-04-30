@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 1048914459}
   - component: {fileID: 1048914458}
   - component: {fileID: 1048914461}
+  - component: {fileID: 1048914462}
   m_Layer: 0
   m_Name: Sprite arielFINAL2_0
   m_TagString: Player
@@ -420,7 +421,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba12865dab279e47897dad38a50300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barraVida: {fileID: 1609131378}
   velocidade: 0.33
+--- !u!61 &1048914462
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048914457}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.15, y: 4.47}
+    newSize: {x: 1.15, y: 4.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.15, y: 4.47}
+  m_EdgeRadius: 0
 --- !u!1001 &1077162492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,6 +590,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Particle System
       objectReference: {fileID: 0}
+    - target: {fileID: 6359610314293205820, guid: d0735a8e95832814787ae20a22889573,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6359610314293205822, guid: d0735a8e95832814787ae20a22889573,
+        type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0735a8e95832814787ae20a22889573, type: 3}
 --- !u!1 &1230879129
@@ -680,9 +718,9 @@ MonoBehaviour:
   camisinha: {fileID: 7847934435100222819, guid: 21533c7d1a17bf6438741c05b7ab667d,
     type: 3}
   remedio: {fileID: 1076128369908254188, guid: 70eddb54ac335ab448bf98f871467736, type: 3}
-  posicao1: {x: 13, y: -1.4}
-  posicao2: {x: 13, y: -2.3}
-  posicao3: {x: 13, y: -3.2}
+  posicao1: {x: 13, y: -2.3}
+  posicao2: {x: 13, y: -3.2}
+  posicao3: {x: 13, y: -4.1}
   spawnTime: 2
   spawnCamisinhaCooldown: 5
 --- !u!4 &1286501218
@@ -930,6 +968,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 237
       objectReference: {fileID: 0}
+    - target: {fileID: 8908008281036935069, guid: 11d98237f1c82c542a0762a5962dbabd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d98237f1c82c542a0762a5962dbabd, type: 3}
 --- !u!4 &1485262195 stripped
@@ -1012,6 +1055,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b32db0482de9dce428ac333779722218, type: 3}
+--- !u!1 &1609131378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8908008281036935069, guid: 11d98237f1c82c542a0762a5962dbabd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1430618386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1630749800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3150223925190508976, guid: a835c41f504ee46498369c5c13ec1886,
