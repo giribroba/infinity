@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         pistaAtual += axisY;
         if (pistaAtual < -1)
             pistaAtual = -1;
+
         if (pistaAtual > 1)
             pistaAtual = 1;
 
@@ -45,12 +46,15 @@ public class Player : MonoBehaviour
         {
             case 1:
                 this.transform.position = new Vector2(this.transform.position.x, -1.4f);
+                gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
                 break;
             case 0:
                 this.transform.position = new Vector2(this.transform.position.x, -2.3f);
+                gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                 break;
             case -1:
                 this.transform.position = new Vector2(this.transform.position.x, -3.2f);
+                gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
                 break;
         }
     }

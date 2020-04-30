@@ -37,6 +37,18 @@ public class ControladorObstaculos : MonoBehaviour
                 index++;
             }
             clone.GetComponent<ObstaculosBehaviour>().Pista = numeroRandom;
+            switch (numeroRandom)
+            {
+                case -1:
+                    clone.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                    break;
+                case 0:
+                    clone.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    break;
+                case 1:
+                    clone.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+                    break;
+            }
             spawnCooldown = Time.time + spawnTime;
 
         }
