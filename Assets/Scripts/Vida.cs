@@ -6,13 +6,15 @@ public class Vida : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particula;
     [SerializeField] private GameObject barraMovel, barraPreenchedora;
-    [SerializeField] private float vida, velocidade;
+    [SerializeField] private float velocidade;
+    private float vida = 100;
     private RectTransform rt;
     private Image iBarraPreenchedora;
     private Renderer rParticula;
     public float VidaVar { get { return vida; } set { vida = value; } }
     void Start()
     {
+        vida = 100;
         rParticula = particula.GetComponent<Renderer>();
         iBarraPreenchedora = barraPreenchedora.GetComponent<Image>();
         rt = this.GetComponent<RectTransform>();
