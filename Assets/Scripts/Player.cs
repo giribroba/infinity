@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<ObstaculosBehaviour>().Pista == pistaAtual)
+        if (collision.gameObject.GetComponentInParent<ObstaculosBehaviour>().Pista == pistaAtual)
         {
             switch (collision.gameObject.tag)
             {
