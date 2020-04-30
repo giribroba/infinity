@@ -10,37 +10,27 @@ public class Player : MonoBehaviour
     public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
 
-    void Start()
-    {
-
-    }
     void Update()
     {
         AtivarBarra();
         axisY = 0;
-#if UNITY_ANDROID
-        if (Input.touchCount > 0)
+
+        if (Input.GetMouseButtonDown(0))
         {
-            touch = Input.GetTouch(0);
-            switch (touch.phase)
-            {
-                case TouchPhase.Began:
-                    startTouchY = touch.position.y;
-                    break;
-                case TouchPhase.Moved:
-                    finalTouchY = touch.position.y;
-                    break;
-                case TouchPhase.Ended:
-                    axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
-                    break;
-            }
+            startTouchY = Input.mousePosition.y;
         }
-#elif UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetMouseButtonUp(0))
+        {
+            finalTouchY = Input.mousePosition.y;
+            if (startTouchY - finalTouchY != 0)
+                axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
+        }
+#if UNITY_STANDALONE
+        if (Input.GetButtonDown("Down"))
         {
             axisY = -1;
         }
-        else if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetButtonDown("Up"))
         {
             axisY = 1;
         }
