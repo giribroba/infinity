@@ -26,16 +26,25 @@ public class ControladorObstaculos : MonoBehaviour
         {
             numeroRandom = Random.Range(-1, 2);
             posicao = numeroRandom == -1 ? posicao3 : numeroRandom == 0 ? posicao2 : posicao1;
-            if(index >= spawnCamisinhaCooldown)
+            if (Player.doente)
             {
-                clone = Instantiate(camisinha, posicao, Quaternion.identity);
-                index = 0;
+                clone = Instantiate(remedio, posicao, Quaternion.identity);
             }
             else
             {
-                clone = Instantiate(virus, posicao, Quaternion.identity);
-                index++;
+                if(index >= spawnCamisinhaCooldown)
+                {
+                    clone = Instantiate(camisinha, posicao, Quaternion.identity);
+                    index = 0;
+                    spawnCamisinhaCooldown = Random.Range(3, 6);
+                }
+                else
+                {
+                    clone = Instantiate(virus, posicao, Quaternion.identity);
+                    index++;
+                }
             }
+            
             clone.GetComponent<ObstaculosBehaviour>().Pista = numeroRandom;
             switch (numeroRandom)
             {

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
@@ -31,5 +32,7 @@ public class Vida : MonoBehaviour
             if (vida > 0)
                 vida -= velocidade * Time.deltaTime;
         }
+        if (vida >= 0)
+            SceneManager.LoadScene("Menu");
     }
 }

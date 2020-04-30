@@ -1,15 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject barraVida;
+    [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN;
     public float velocidade;
     private float startTouchY, finalTouchY;
     private Touch touch;
     private bool shield;
-    public static bool doente;
+    private bool execute = true;
+    public static bool doente; 
     [Range(-1, 1)] private int axisY, pistaAtual;
+    private GameObject[] obstaculos;
+    [SerializeField]private Image filtro;
 
+    void Start()
+    {
+        execute = true;
+    }
     void Update()
     {
         AtivarBarra();
@@ -21,6 +32,14 @@ public class Player : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            if (doente && execute)
+            {
+                Time.timeScale = 1;
+                imageSifilisEN.SetActive(false);
+                imageSifilisPTBR.SetActive(false);
+                execute = false;
+                filtro.gameObject.SetActive(true);
+            }
             finalTouchY = Input.mousePosition.y;
             if (startTouchY - finalTouchY != 0)
                 axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
@@ -75,6 +94,20 @@ public class Player : MonoBehaviour
                     if (!shield)
                     {
                         doente = true;
+                        obstaculos = GameObject.FindGameObjectsWithTag("Pai");
+                        foreach(var x in obstaculos)
+                        {
+                            Destroy(x);
+                        }
+                        if(BotoesMenu.linguagem == 0)
+                        {
+                            imageSifilisPTBR.SetActive(true);
+                        }
+                        else
+                        {
+                            imageSifilisEN.SetActive(true);
+                        }
+                        Time.timeScale = 0;
                     }
                     else
                     {

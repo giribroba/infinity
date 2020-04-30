@@ -141,8 +141,8 @@ GameObject:
   - component: {fileID: 7817723164238573431}
   - component: {fileID: 2925105532413998629}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
+  m_Name: sifilis
+  m_TagString: Pai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
