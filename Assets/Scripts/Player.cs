@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private float startTouchY, finalTouchY;
     private Touch touch;
     private bool shield;
-    private bool execute = true;
+    public static  bool execute = true;
     public static bool doente; 
     [Range(-1, 1)] private int axisY, pistaAtual;
     private GameObject[] obstaculos;
