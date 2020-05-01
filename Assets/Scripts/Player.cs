@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("botao", 1);
         execute = true;
     }
     void Update()
