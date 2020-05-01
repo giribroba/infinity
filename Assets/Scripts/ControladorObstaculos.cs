@@ -8,19 +8,44 @@ public class ControladorObstaculos : MonoBehaviour
     [SerializeField] private Vector2 posicao1, posicao2, posicao3;
     [SerializeField] private float spawnTime, spawnCamisinhaCooldown, spawnTimeVelMax;
     private float spawnCooldown, numeroRandom, index, min;
+    private bool execute = true, execute2 = true;
+    public static bool aviso1, tutorial = true, aviso2;
     private GameObject clone;
     private Vector2 posicao;
     void Start()
     {
+        tutorial = PlayerPrefs.GetFloat("tutorial") == 1 ? false : true;
         index = 0;
         min = spawnTime;
+        aviso1 = false;
+        aviso2 = false;
     }
 
     void Update()
     {
-        print(spawnTime + " SPAWN");
-        Spawn();
-        Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min);
+        if (!tutorial)
+        {
+            Spawn();
+            Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min);
+        }
+        else if(execute)
+        {
+            clone = Instantiate(virus, posicao2, Quaternion.identity);
+            execute = false;
+        }
+        if (tutorial)
+        {
+            if(clone.gameObject.transform.position.x <= -2.751225f && !aviso2)
+            {
+                aviso1 = true;
+            }
+            if (aviso2 && execute2)
+            {
+                clone = Instantiate(camisinha, Player.pista == 1 ? posicao1 : posicao3, Quaternion.identity);
+                clone.gameObject.GetComponent<ObstaculosBehaviour>().Pista = Player.pista == -1  ? -1 : 1;
+                execute2 = false;
+            }
+        }
     }
 
     private void Spawn()

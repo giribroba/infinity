@@ -6,48 +6,63 @@ using UnityEngine.EventSystems;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN;
+    [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN, bolha, maoTutorial;
     public float velocidade, min;
     [SerializeField] private float velocidadeMax;
+    [SerializeField] private Text tutorial;
     private float startTouchY, finalTouchY;
     private Touch touch;
-    private bool shield;
+    private bool shield, move;
     public static bool execute = true;
-    public static bool doente; 
+    public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
+    public static float pista;
     private GameObject[] obstaculos;
     [SerializeField]private Image filtro;
 
     void Start()
     {
+        tutorial.text = BotoesMenu.linguagem == 0 ? "Cuidado com a sífilis!! não vai querer pegar uma IST certo?" : "Beware with syphilis!! You don't want to have STI, right?";
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
         min = velocidade;
     }
     void Update()
     {
-        print(velocidade + " PLAYER ");
+        print(pista);
+        if (ControladorObstaculos.tutorial)
+        {
+            if (ControladorObstaculos.aviso1)
+            {
+                tutorial.gameObject.SetActive(true);
+                maoTutorial.SetActive(true);
+                move = true;
+            }
+        }
+        bolha.SetActive(shield ? true : false);
         ProgressaoDificuldade(ref velocidade, velocidadeMax, min);
         AtivarBarra();
         axisY = 0;
-
-        if (Input.GetMouseButtonDown(0))
+        if (move)
         {
-            startTouchY = Input.mousePosition.y;
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (doente && execute)
+            if (Input.GetMouseButtonDown(0))
             {
-                Time.timeScale = 1;
-                imageSifilisEN.SetActive(false);
-                imageSifilisPTBR.SetActive(false);
-                execute = false;
-                filtro.gameObject.SetActive(true);
+                startTouchY = Input.mousePosition.y;
             }
-            finalTouchY = Input.mousePosition.y;
-            if (startTouchY - finalTouchY != 0)
-                axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (doente && execute)
+                {
+                    Time.timeScale = 1;
+                    imageSifilisEN.SetActive(false);
+                    imageSifilisPTBR.SetActive(false);
+                    execute = false;
+                    filtro.gameObject.SetActive(true);
+                }
+                finalTouchY = Input.mousePosition.y;
+                if (startTouchY - finalTouchY != 0)
+                    axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
+            }
         }
 #if UNITY_STANDALONE
         if (Input.GetButtonDown("Down"))
@@ -65,12 +80,20 @@ public class Player : MonoBehaviour
 
         if (pistaAtual > 1)
             pistaAtual = 1;
-
+        pista = pistaAtual;
         switch (pistaAtual)
         {
             case 1:
                 this.transform.position = new Vector2(this.transform.position.x, -1.4f);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = -1;
+                if (ControladorObstaculos.tutorial && ControladorObstaculos.aviso1)
+                {
+                    ControladorObstaculos.aviso1 = false;
+                    ControladorObstaculos.aviso2 = true;
+                    maoTutorial.SetActive(false);
+                    move = false;
+                    tutorial.text = BotoesMenu.linguagem == 0 ? "Não conte com a sorte, proteja-se" : "It's better not to test your luck and just protect yourself";
+                }
                 break;
             case 0:
                 this.transform.position = new Vector2(this.transform.position.x, -2.3f);
@@ -79,6 +102,14 @@ public class Player : MonoBehaviour
             case -1:
                 this.transform.position = new Vector2(this.transform.position.x, -3.2f);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                if (ControladorObstaculos.tutorial)
+                {
+                    ControladorObstaculos.aviso1 = false;
+                    ControladorObstaculos.aviso2 = true;
+                    maoTutorial.SetActive(false);
+                    move = false;
+                    tutorial.text = BotoesMenu.linguagem == 0 ? "Não conte com a sorte, proteja-se" : "It's better not to test your luck and just protect yourself";
+                }
                 break;
         }
     }
@@ -128,6 +159,13 @@ public class Player : MonoBehaviour
                     break;
                 case "Camisinha":
                     shield = true;
+                    if (ControladorObstaculos.tutorial)
+                    {
+                        move = true;
+                        print(move);
+                        ControladorObstaculos.tutorial = false;
+                        tutorial.gameObject.SetActive(false);
+                    }
                     break;
                 case "Remedio":
                     barraVida.GetComponent<Vida>().VidaVar += 10;

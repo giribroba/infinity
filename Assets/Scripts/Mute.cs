@@ -29,7 +29,7 @@ public class Mute : MonoBehaviour
             {
                 for (int i = 0; i < this.transform.childCount; i++)
                 {
-                    this.transform.GetChild(i).GetComponent<AudioSource>().volume = 1;
+                    this.transform.GetChild(i).GetComponent<AudioSource>().volume = 0;
                 }
             }
             for (int i = 0; i < sources.Length; i++)
