@@ -108,7 +108,12 @@ public class Player : MonoBehaviour
     public static void ProgressaoDificuldade(ref float velocidade, float velocidadeMax,float min, bool decrescente = false)
     {
         if (Pontuação.score <= 300)
-            velocidade = decrescente ? (Pontuação.score / 300) * velocidadeMax > velocidade ? min : (Pontuação.score / 100) * velocidadeMax : (Pontuação.score / 100) * velocidadeMax < velocidade ? min : (Pontuação.score / 100) * velocidadeMax;
+        {
+            if (!decrescente)
+                velocidade = (Pontuação.score / 300) * velocidadeMax < velocidade ? min : (Pontuação.score / 100) * velocidadeMax;
+            else
+                velocidade = (300 / Pontuação.score) * velocidadeMax > velocidade ? min : (300 / Pontuação.score) * velocidadeMax;
+        }
         else
             velocidade = velocidadeMax;
     }

@@ -26,7 +26,7 @@ public class ControladorObstaculos : MonoBehaviour
         if (!tutorial)
         {
             Spawn();
-            Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min);
+            Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min, true);
         }
         else if(execute)
         {

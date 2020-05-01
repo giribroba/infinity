@@ -25,7 +25,7 @@ public class Telinha : MonoBehaviour
     public void Continuar()
     {
         Time.timeScale = 1;
-        gameObject.SetActive(false);
         filtro.gameObject.SetActive(true);
+        Destroy(this.gameObject);
     }
 }
