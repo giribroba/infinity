@@ -8,10 +8,11 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN;
     public float velocidade;
+    [SerializeField] private float velocidadeMax;
     private float startTouchY, finalTouchY;
     private Touch touch;
     private bool shield;
-    public static  bool execute = true;
+    public static bool execute = true;
     public static bool doente; 
     [Range(-1, 1)] private int axisY, pistaAtual;
     private GameObject[] obstaculos;
@@ -23,6 +24,8 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        print(velocidade + " PLAYER ");
+        ProgressaoDificuldade(ref velocidade, velocidadeMax);
         AtivarBarra();
         axisY = 0;
 
@@ -76,6 +79,13 @@ public class Player : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
                 break;
         }
+    }
+    public static void ProgressaoDificuldade(ref float velocidade, float velocidadeMax)
+    {
+        if (Pontuação.score <= 100)
+            velocidade = (Pontuação.score / 100) * velocidadeMax < velocidade ? velocidade : (Pontuação.score / 100) * velocidadeMax;
+        else
+            velocidade = velocidadeMax;
     }
     private void AtivarBarra()
     {

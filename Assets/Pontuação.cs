@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Pontuação : MonoBehaviour
 {
-    float score;
-    float tempoInicial;
+    public static float score;
+    private float tempoInicial;
     [SerializeField] private Text scoreText;
 
     void Start()
