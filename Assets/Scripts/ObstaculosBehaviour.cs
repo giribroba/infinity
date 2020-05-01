@@ -19,10 +19,16 @@ public class ObstaculosBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (ControladorObstaculos.aviso1 && ControladorObstaculos.tutorial)
+            speed = 0;
+        else if (ControladorObstaculos.aviso2)
+            speed = speedreal;
         if (transform.position.x < -9.63f)
             Destroy(gameObject);
-        print(speedreal + " OBSTACULOS");
-        Player.ProgressaoDificuldade(ref speed, speedVelMax, speedreal);
-        rb.velocity = new Vector2(speedreal, 0) * Time.deltaTime;
+        if (!ControladorObstaculos.tutorial)
+        {
+            Player.ProgressaoDificuldade(ref speed, speedVelMax, speedreal);
+        }
+        rb.velocity = new Vector2(speed, 0) * Time.deltaTime;
     }
 }
