@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
         if (Input.GetButtonDown("Cancel"))
         {
             SceneManager.LoadScene("Menu");
+            Mute.Selecionar(0);
         }
     }
 }
