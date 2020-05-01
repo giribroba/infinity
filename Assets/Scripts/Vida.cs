@@ -37,9 +37,9 @@ public class Vida : MonoBehaviour
         if (vida <= 0)
         {
             Mute.Selecionar(0);
-            SceneManager.LoadScene("Menu");
             Player.execute = true;
             Player.doente = false;
+            SceneManager.LoadScene("Menu");
         }
     }
 }

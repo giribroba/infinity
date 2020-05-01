@@ -51,14 +51,6 @@ public class Player : MonoBehaviour
             }
             if (Input.GetMouseButtonUp(0))
             {
-                if (doente && execute)
-                {
-                    Time.timeScale = 1;
-                    imageSifilisEN.SetActive(false);
-                    imageSifilisPTBR.SetActive(false);
-                    execute = false;
-                    filtro.gameObject.SetActive(true);
-                }
                 finalTouchY = Input.mousePosition.y;
                 if (startTouchY - finalTouchY != 0)
                     axisY = (startTouchY - finalTouchY < 0 ? 1 : -1);
