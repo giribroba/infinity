@@ -22,7 +22,8 @@ public class Vida : MonoBehaviour
 
     void Update()
     {
-        if (Player.doente)
+        print(vida);
+        if (/*Player.doente*/ true)
         {
             particula.enableEmission = true;
             rParticula.material.color = iBarraPreenchedora.color;
