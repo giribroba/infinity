@@ -246,7 +246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &90337223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -291,14 +291,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "ah idk how being fine feels like ?? or feeling bad ?? idk how i\u2019m
-    feeling rn, but anyways, how is it going??"
+  m_Text: i dont kno where i aM!!
 --- !u!222 &90337225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -324,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &150521324
 RectTransform:
   m_ObjectHideFlags: 0
@@ -369,13 +368,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "have I ever said no to a party?? ofccc i\u2019m coming!"
+  m_Text: bye.
 --- !u!222 &150521326
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -654,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -826,7 +825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &172250679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -877,7 +876,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: "\u2026\u2026\u2026\u2026\u2026\u2026\u2026\r"
 --- !u!222 &172250681
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -903,7 +902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &177633592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1062,7 +1061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &263165260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1113,7 +1112,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "i\u2019m cool, buddy! hbu??\r"
+  m_Text: yez
 --- !u!222 &263165262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1270,7 +1269,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1281,8 +1280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: "No\u2026 What happened??"
 --- !u!222 &325960684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1329,8 +1327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 193.8731, y: 0}
-  m_SizeDelta: {x: 364.21213, y: 64.8832}
+  m_AnchoredPosition: {x: 202.7, y: 0}
+  m_SizeDelta: {x: 364.21213, y: 82.52717}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366582053
 MonoBehaviour:
@@ -1638,7 +1636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &395772919
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1689,7 +1687,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: vei tu eh mt ciumenta me deix
+  m_Text: vei tu eh mt ciumento me deix
 --- !u!222 &395772921
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1797,7 +1795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &407641655
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1848,7 +1846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: u r scaring mee, im gonna sleep bye
 --- !u!222 &407641657
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2029,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &446402263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2080,7 +2078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "I\u2019m pretty bored rn\u2026 hbu?"
+  m_Text: idkk skdskajindj
 --- !u!222 &446402265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2106,7 +2104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &465935319
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2157,7 +2155,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: ' i made out w a very hot girLJSINDI'
 --- !u!222 &465935321
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2287,7 +2285,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511474610}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -2311,7 +2309,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: could you tell me the reason lol?
+  m_Text: did you see what I did?
 --- !u!222 &511474613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2337,7 +2335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &520728356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2388,7 +2386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: hmm lol ok imma sleep now!
 --- !u!222 &520728358
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2553,7 +2551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544358053}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41000006, y: -0.05000007, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 151002619}
@@ -2620,7 +2618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &571591566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2660,7 +2658,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2671,8 +2669,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: im not jokingg, come on did you both wear a condom!?!!????
 --- !u!222 &571591568
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2775,7 +2772,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &640174221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2826,8 +2823,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: "oh my gosh this is serious! you have no idea but this thing is way more
+    dangerous than it looks\u2026"
 --- !u!222 &640174223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3000,7 +2997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &728835813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3051,8 +3048,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: ARIEL YOU GOTTA PROTECT YOURSELF!
 --- !u!222 &728835815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3078,7 +3074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &761054393
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3129,7 +3125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: "No, I'm not\u2026 should I ??"
 --- !u!222 &761054395
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3155,7 +3151,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &803265369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3206,7 +3202,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: "wdym what\u2019s that??"
 --- !u!222 &803265371
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3502,7 +3498,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -3604,6 +3600,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1071548223}
+    - target: {fileID: 7699477139384767005, guid: 39f04a7e3669a574cbad393e9967ffe4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7699477139384767007, guid: 39f04a7e3669a574cbad393e9967ffe4,
         type: 3}
       propertyPath: m_Enabled
@@ -3769,10 +3770,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7699477140645175533, guid: 39f04a7e3669a574cbad393e9967ffe4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7699477140645175535, guid: 39f04a7e3669a574cbad393e9967ffe4,
         type: 3}
       propertyPath: m_Text
       value: n seikkkkk
+      objectReference: {fileID: 0}
+    - target: {fileID: 7699477140695789424, guid: 39f04a7e3669a574cbad393e9967ffe4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7699477140695789426, guid: 39f04a7e3669a574cbad393e9967ffe4,
         type: 3}
@@ -4327,7 +4338,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -4506,7 +4517,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966607120}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -4530,7 +4541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "hmm there\u2019s something up u wanna share w me??"
+  m_Text: Dude, you dunno what I did
 --- !u!222 &966607123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5000,7 +5011,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -5070,7 +5081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1064576318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5359,7 +5370,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -5429,7 +5440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1080851571
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5469,7 +5480,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5480,8 +5491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: "you\u2019re gonna get IST any time soon, i\u2019m just sayin\u2026."
 --- !u!222 &1080851573
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5584,7 +5594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1114509983
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5635,7 +5645,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: no????? should i know what this is???
 --- !u!222 &1114509985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5990,7 +6000,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1193312853
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6035,13 +6045,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "have I ever said no to a party?? ofccc i\u2019m coming!"
+  m_Text: "i\u2026 made out\u2026. w this one person\u2026 LMAOO"
 --- !u!222 &1193312855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6112,13 +6122,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "i\u2019m way more than fine, i\u2019m actually pretty excited!"
+  m_Text: "oh my god ariel\r"
 --- !u!222 &1193463200
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6500,7 +6510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1351326389
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6577,7 +6587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1385157350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6628,7 +6638,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: i made out with this unbelievably CUTE GUY AHHHSAHA
 --- !u!222 &1385157352
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6654,7 +6664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1398898533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6705,7 +6715,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: yesss, FOR SURE!!
+  m_Text: oops
 --- !u!222 &1398898535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7184,7 +7194,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1463210966}
-  - component: {fileID: 1463210967}
   m_Layer: 5
   m_Name: "Op\xE7\xF5es 2"
   m_TagString: Untagged
@@ -7213,19 +7222,6 @@ RectTransform:
   m_AnchoredPosition: {x: -370, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1463210967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463210965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd83f1200602ac4999f646b58eb3706, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textos: []
 --- !u!1 &1529949432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7296,7 +7292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559165264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7752,7 +7748,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -8020,7 +8016,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hey Ariel! wassup??
+  m_Text: are you ok?????
 --- !u!222 &1606242672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8046,7 +8042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1613776770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8246,7 +8242,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -8463,7 +8459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1713468085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8514,8 +8510,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "there\u2019s gonna be this really cool party tonight LMAO do you wanna
-    come w me?"
+  m_Text: ariel???? U DONT know what a IST is????
 --- !u!222 &1713468087
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8541,7 +8536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1736610184
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8558,7 +8553,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.7, y: 0}
+  m_AnchoredPosition: {x: 5, y: -5}
   m_SizeDelta: {x: 325.82657, y: 62.794144}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736610185
@@ -8592,7 +8587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "have I ever said no to a party?? ofccc i\u2019m coming!"
+  m_Text: U R JEALOUS stop rn, leave me alone . .. .!
 --- !u!222 &1736610186
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8782,7 +8777,7 @@ PrefabInstance:
     - target: {fileID: 6922657654262140449, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6922657654262140455, guid: d013b68eb8fc412408501ee60d308e04,
         type: 3}
@@ -8847,7 +8842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1862949294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9348,7 +9343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2066445772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9442,8 +9437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 325.82657, y: 46.759094}
+  m_AnchoredPosition: {x: 0, y: -0.00013733}
+  m_SizeDelta: {x: 325.82657, y: 64.88338}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136892456
 MonoBehaviour:
@@ -9465,7 +9460,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 17
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9476,7 +9471,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: veikkkkkkkkkkkkkk
+  m_Text: "VC N\xC3O SABE NEM UM POUCO DA MINHA HISTORIAKKKKKK TU N SABE MENINO OQ
+    ACONTECEU NAO SABE TEM NEM IDEIA"
 --- !u!222 &2136892457
 CanvasRenderer:
   m_ObjectHideFlags: 0

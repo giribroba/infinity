@@ -3035,7 +3035,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "hmm there\u2019s something up u wanna share w me??"
+  m_Text: is there something you wanna share with me?
 --- !u!222 &1826318352
 CanvasRenderer:
   m_ObjectHideFlags: 0
