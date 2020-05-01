@@ -14,14 +14,15 @@ public class ObstaculosBehaviour : MonoBehaviour
     {
         speedreal = speed;
         rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 8);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < -9.63f)
+            Destroy(gameObject);
         print(speedreal + " OBSTACULOS");
-        Player.ProgressaoDificuldade(ref speedreal, speedVelMax);
+        Player.ProgressaoDificuldade(ref speed, speedVelMax, speedreal);
         rb.velocity = new Vector2(speedreal, 0) * Time.deltaTime;
     }
 }

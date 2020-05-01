@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN;
-    public float velocidade;
+    public float velocidade, min;
     [SerializeField] private float velocidadeMax;
     private float startTouchY, finalTouchY;
     private Touch touch;
@@ -22,11 +22,12 @@ public class Player : MonoBehaviour
     {
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
+        min = velocidade;
     }
     void Update()
     {
         print(velocidade + " PLAYER ");
-        ProgressaoDificuldade(ref velocidade, velocidadeMax);
+        ProgressaoDificuldade(ref velocidade, velocidadeMax, min);
         AtivarBarra();
         axisY = 0;
 
@@ -81,10 +82,10 @@ public class Player : MonoBehaviour
                 break;
         }
     }
-    public static void ProgressaoDificuldade(ref float velocidade, float velocidadeMax)
+    public static void ProgressaoDificuldade(ref float velocidade, float velocidadeMax,float min, bool decrescente = false)
     {
-        if (Pontuação.score <= 100)
-            velocidade = (Pontuação.score / 100) * velocidadeMax < velocidade ? velocidade : (Pontuação.score / 100) * velocidadeMax;
+        if (Pontuação.score <= 300)
+            velocidade = decrescente ? (Pontuação.score / 300) * velocidadeMax > velocidade ? min : (Pontuação.score / 100) * velocidadeMax : (Pontuação.score / 100) * velocidadeMax < velocidade ? min : (Pontuação.score / 100) * velocidadeMax;
         else
             velocidade = velocidadeMax;
     }
