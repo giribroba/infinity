@@ -6,18 +6,21 @@ public class ControladorObstaculos : MonoBehaviour
 {
     [SerializeField] private GameObject virus, camisinha, remedio;
     [SerializeField] private Vector2 posicao1, posicao2, posicao3;
-    [SerializeField] private float spawnTime, spawnCamisinhaCooldown;
-    private float spawnCooldown, numeroRandom, index;
+    [SerializeField] private float spawnTime, spawnCamisinhaCooldown, spawnTimeVelMax;
+    private float spawnCooldown, numeroRandom, index, min;
     private GameObject clone;
     private Vector2 posicao;
     void Start()
     {
         index = 0;
+        min = spawnTime;
     }
 
     void Update()
     {
+        print(spawnTime + " SPAWN");
         Spawn();
+        Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min);
     }
 
     private void Spawn()
