@@ -1360,6 +1360,7 @@ MonoBehaviour:
   maoTutorial: {fileID: 861385517}
   velocidade: 0.15
   min: 0
+  remedio: 0
   velocidadeMax: 0.0006
   tutorial: {fileID: 1553506106}
   filtro: {fileID: 1965387424}
@@ -1760,7 +1761,7 @@ MonoBehaviour:
   posicao1: {x: 13, y: -1.4}
   posicao2: {x: 13, y: -2.3}
   posicao3: {x: 13, y: -3.2}
-  spawnTime: 3.5
+  spawnTime: 3
   spawnCamisinhaCooldown: 5
   spawnTimeVelMax: -0.0006
 --- !u!4 &1286501218
@@ -2064,6 +2065,11 @@ PrefabInstance:
       propertyPath: particula
       value: 
       objectReference: {fileID: 1642440751}
+    - target: {fileID: 8908008281036935065, guid: 11d98237f1c82c542a0762a5962dbabd,
+        type: 3}
+      propertyPath: velocidade
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8908008281036935067, guid: 11d98237f1c82c542a0762a5962dbabd,
         type: 3}
       propertyPath: m_RaycastTarget
