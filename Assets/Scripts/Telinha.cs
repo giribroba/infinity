@@ -28,6 +28,7 @@ public class Telinha : MonoBehaviour
         {
             Time.timeScale = 1;
             filtro.gameObject.SetActive(true);
+            ObstaculosBehaviour.boost = true;
             Destroy(this.gameObject);
         }
     }
