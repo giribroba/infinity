@@ -13,7 +13,7 @@ public class Telinha : MonoBehaviour
 
     public void Avancar()
     {
-        if (index < 5)
+        if (index < imagens.Length)
             index++;
     }
 
@@ -24,8 +24,11 @@ public class Telinha : MonoBehaviour
     }
     public void Continuar()
     {
-        Time.timeScale = 1;
-        filtro.gameObject.SetActive(true);
-        Destroy(this.gameObject);
+        if (index == imagens.Length - 1)
+        {
+            Time.timeScale = 1;
+            filtro.gameObject.SetActive(true);
+            Destroy(this.gameObject);
+        }
     }
 }
