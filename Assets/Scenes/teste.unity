@@ -1360,7 +1360,7 @@ MonoBehaviour:
   maoTutorial: {fileID: 861385517}
   velocidade: 0.15
   min: 0
-  velocidadeMax: 0.33
+  velocidadeMax: 0.0006
   tutorial: {fileID: 1553506106}
   filtro: {fileID: 1965387424}
 --- !u!61 &1048914462
@@ -1762,7 +1762,7 @@ MonoBehaviour:
   posicao3: {x: 13, y: -3.2}
   spawnTime: 4
   spawnCamisinhaCooldown: 5
-  spawnTimeVelMax: 1.5
+  spawnTimeVelMax: -0.01
 --- !u!4 &1286501218
 Transform:
   m_ObjectHideFlags: 0
