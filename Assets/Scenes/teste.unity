@@ -1760,9 +1760,9 @@ MonoBehaviour:
   posicao1: {x: 13, y: -1.4}
   posicao2: {x: 13, y: -2.3}
   posicao3: {x: 13, y: -3.2}
-  spawnTime: 4
+  spawnTime: 3.5
   spawnCamisinhaCooldown: 5
-  spawnTimeVelMax: -0.01
+  spawnTimeVelMax: -0.0006
 --- !u!4 &1286501218
 Transform:
   m_ObjectHideFlags: 0

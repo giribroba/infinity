@@ -26,6 +26,10 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
         min = velocidade;
+        if (!ControladorObstaculos.tutorial)
+        {
+            move = true;
+        }
     }
     void Update()
     {
