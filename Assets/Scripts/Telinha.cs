@@ -13,7 +13,7 @@ public class Telinha : MonoBehaviour
 
     public void Avancar()
     {
-        if (index < imagens.Length)
+        if (index < imagens.Length - 1)
             index++;
     }
 
