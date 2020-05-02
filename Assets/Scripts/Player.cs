@@ -22,12 +22,13 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteAll();
+        move = !ControladorObstaculos.tutorial;
         tutorial.text = BotoesMenu.linguagem == 0 ? "Cuidado com a sífilis!! não vai querer pegar uma IST certo?" : "Beware with syphilis!! You don't want to have STI, right?";
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
         min = velocidade;
-        move = ControladorObstaculos.tutorial;
+        print(ControladorObstaculos.tutorial);
+        print(move);
     }
     void Update()
     {
