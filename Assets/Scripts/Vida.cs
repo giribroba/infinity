@@ -23,7 +23,7 @@ public class Vida : MonoBehaviour
     void Update()
     {
         print(vida);
-        if (/*Player.doente*/ true)
+        if (Player.doente)
         {
             particula.enableEmission = true;
             rParticula.material.color = iBarraPreenchedora.color;
@@ -35,6 +35,7 @@ public class Vida : MonoBehaviour
             if (vida > 0)
                 vida -= velocidade * Time.deltaTime;
         }
+
         if (vida <= 0)
         {
             Mute.Selecionar(0);

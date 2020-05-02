@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -30,6 +31,16 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Time.timeScale = 1;
+            Mute.Selecionar(0);
+            Player.execute = true;
+            Player.doente = false;
+            SceneManager.LoadScene("Menu");
+        }
+
         if (ControladorObstaculos.tutorial)
         {
             if (ControladorObstaculos.aviso1)
