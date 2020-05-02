@@ -27,6 +27,7 @@ public class ControladorObstaculos : MonoBehaviour
         {
             Spawn();
             Player.ProgressaoDificuldade(ref spawnTime, spawnTimeVelMax, min, true);
+            print(spawnTime);
         }
         else if(execute)
         {

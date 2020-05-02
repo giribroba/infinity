@@ -105,17 +105,14 @@ public class Player : MonoBehaviour
                 break;
         }
     }
-    public static void ProgressaoDificuldade(ref float velocidade, float velocidadeMax,float min, bool decrescente = false)
+    public static void ProgressaoDificuldade(ref float velocidade, float multiplicadorPerfeito, float min)
     {
         if (Pontuação.score <= 300)
         {
-            if (!decrescente)
-                velocidade = (Pontuação.score / 300) * velocidadeMax < velocidade ? min : (Pontuação.score / 100) * velocidadeMax;
-            else
-                velocidade = (300 / Pontuação.score) * velocidadeMax > velocidade ? min : (300 / Pontuação.score) * velocidadeMax;
+            velocidade = Pontuação.score  * multiplicadorPerfeito + min;
         }
         else
-            velocidade = velocidadeMax;
+            velocidade = 300 * multiplicadorPerfeito + min;
     }
     private void AtivarBarra()
     {
