@@ -12,6 +12,11 @@ public class ControladorObstaculos : MonoBehaviour
     public static bool aviso1, tutorial = true, aviso2;
     private GameObject clone;
     private Vector2 posicao;
+
+    private void Awake()
+    {
+        tutorial = PlayerPrefs.GetFloat("tutorial") == 1 ? false : true;
+    }
     void Start()
     {
         tutorial = PlayerPrefs.GetFloat("tutorial") == 1 ? false : true;

@@ -17,7 +17,8 @@ public class Pontuação : MonoBehaviour
 
     public void Update()
     {
-        score = (int)(Time.time - tempoInicial);
-        scoreText.text = "Score: " + score;
+        if(Time.timeScale > 0 && !ControladorObstaculos.tutorial)
+            score += Time.deltaTime;
+        scoreText.text = "Score: " + Mathf.Floor(score);
     }
 }

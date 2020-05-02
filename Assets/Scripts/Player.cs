@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class Player : MonoBehaviour
     private float startTouchY, finalTouchY;
     private Touch touch;
     private bool shield;
-    public static bool execute = true;
-    public static bool doente, move;
+    public static bool execute = true, move, telinha;
+    public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
     public static float pista;
     private GameObject[] obstaculos;
@@ -30,6 +31,16 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Time.timeScale = 1;
+            Mute.Selecionar(0);
+            Player.execute = true;
+            Player.doente = false;
+            SceneManager.LoadScene("Menu");
+        }
+
         if (ControladorObstaculos.tutorial)
         {
             if (ControladorObstaculos.aviso1)
@@ -43,7 +54,7 @@ public class Player : MonoBehaviour
         ProgressaoDificuldade(ref velocidade, velocidadeMax, min);
         AtivarBarra();
         axisY = 0;
-        if (move)
+        if (move && !telinha)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -156,7 +167,6 @@ public class Player : MonoBehaviour
                     if (ControladorObstaculos.tutorial)
                     {
                         move = true;
-                        print(move);
                         ControladorObstaculos.tutorial = false;
                         tutorial.gameObject.SetActive(false);
                         ObstaculosBehaviour.boost = false;
