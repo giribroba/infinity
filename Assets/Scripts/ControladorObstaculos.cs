@@ -31,6 +31,7 @@ public class ControladorObstaculos : MonoBehaviour
         }
         else if(execute)
         {
+            ObstaculosBehaviour.boost = true;
             clone = Instantiate(virus, posicao2, Quaternion.identity);
             execute = false;
         }
