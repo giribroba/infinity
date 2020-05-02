@@ -12,9 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Text tutorial;
     private float startTouchY, finalTouchY;
     private Touch touch;
-    private bool shield, move;
+    private bool shield;
     public static bool execute = true;
-    public static bool doente;
+    public static bool doente, move;
     [Range(-1, 1)] private int axisY, pistaAtual;
     public static float pista;
     private GameObject[] obstaculos;
@@ -27,12 +27,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
         min = velocidade;
-        print(ControladorObstaculos.tutorial);
-        print(move);
     }
     void Update()
     {
-        print(move);
         if (ControladorObstaculos.tutorial)
         {
             if (ControladorObstaculos.aviso1)
