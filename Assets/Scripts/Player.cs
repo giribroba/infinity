@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class Player : MonoBehaviour
 {
     [SerializeField] private GameObject barraVida, imageSifilisPTBR, imageSifilisEN, bolha, maoTutorial;
-    public float velocidade, min;
+    public float velocidade, min, remedio;
     [SerializeField] private float velocidadeMax;
     [SerializeField] private Text tutorial;
     private float startTouchY, finalTouchY;
@@ -26,14 +26,11 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetInt("botao", 1);
         execute = true;
         min = velocidade;
-        if (!ControladorObstaculos.tutorial)
-        {
-            move = true;
-        }
+        move = ControladorObstaculos.tutorial;
     }
     void Update()
     {
-        print(pista);
+        print(move);
         if (ControladorObstaculos.tutorial)
         {
             if (ControladorObstaculos.aviso1)
@@ -167,7 +164,8 @@ public class Player : MonoBehaviour
                     }
                     break;
                 case "Remedio":
-                    barraVida.GetComponent<Vida>().VidaVar += 10;
+                    ProgressaoDificuldade(ref remedio, -0.016f, 10);
+                    barraVida.GetComponent<Vida>().VidaVar += remedio;
                     break;
             }
             Destroy(collision.gameObject);
