@@ -159,6 +159,7 @@ public class Player : MonoBehaviour
                         print(move);
                         ControladorObstaculos.tutorial = false;
                         tutorial.gameObject.SetActive(false);
+                        PlayerPrefs.SetFloat("tutorial", 1);
                     }
                     break;
                 case "Remedio":
