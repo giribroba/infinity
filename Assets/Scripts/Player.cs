@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private float startTouchY, finalTouchY;
     private Touch touch;
     private bool shield;
-    public static bool execute = true, move;
+    public static bool execute = true, move, telinha;
     public static bool doente;
     [Range(-1, 1)] private int axisY, pistaAtual;
     public static float pista;
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         ProgressaoDificuldade(ref velocidade, velocidadeMax, min);
         AtivarBarra();
         axisY = 0;
-        if (move)
+        if (move && !telinha)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -156,7 +156,6 @@ public class Player : MonoBehaviour
                     if (ControladorObstaculos.tutorial)
                     {
                         move = true;
-                        print(move);
                         ControladorObstaculos.tutorial = false;
                         tutorial.gameObject.SetActive(false);
                         ObstaculosBehaviour.boost = false;
