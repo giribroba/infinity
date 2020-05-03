@@ -118,12 +118,12 @@ public class Player : MonoBehaviour
     }
     public static void ProgressaoDificuldade(ref float velocidade, float multiplicadorPerfeito, float min)
     {
-        if (Pontuação.score <= 300)
+        if (Pontuação.score <= 500)
         {
             velocidade = Pontuação.score  * multiplicadorPerfeito + min;
         }
         else
-            velocidade = 300 * multiplicadorPerfeito + min;
+            velocidade = 500 * multiplicadorPerfeito + min;
     }
     private void AtivarBarra()
     {
