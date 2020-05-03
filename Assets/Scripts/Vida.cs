@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class Vida : MonoBehaviour
 {
     [SerializeField] private ParticleSystem particula;
     [SerializeField] private GameObject barraMovel, barraPreenchedora;
+    [SerializeField] private GameObject gameOver;
     [SerializeField] private float velocidade;
     private float vida = 100;
     private RectTransform rt;
@@ -38,10 +40,17 @@ public class Vida : MonoBehaviour
 
         if (vida <= 0)
         {
-            Mute.Selecionar(0);
-            Player.execute = true;
-            Player.doente = false;
-            SceneManager.LoadScene("Menu");
+            StartCoroutine("GameOver");
         }
+    }
+
+    private IEnumerator GameOver()
+    {
+        Player.execute = true;
+        Player.doente = false;
+        gameOver.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Mute.Selecionar(0);
+        SceneManager.LoadScene("Menu");
     }
 }
