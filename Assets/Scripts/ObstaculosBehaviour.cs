@@ -42,7 +42,7 @@ public class ObstaculosBehaviour : MonoBehaviour
             speedNormal = 0;
         else if (ControladorObstaculos.aviso2)
             speedNormal = speedreal;
-        if (transform.position.x < -9.63f)
+        if (transform.position.x < -15)
             Destroy(gameObject);
         if (!ControladorObstaculos.tutorial)
         {
